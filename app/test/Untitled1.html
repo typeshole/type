@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+  <body>
+
+    <h2>Using the XMLHttpRequest object</h2>
+
+    <button type="button" onclick="loadXMLDoc()">Change Content</button>
+
+    <pre id="d3"></pre>
+
+
+    <pre id="d1"></pre>
+
+    <pre id="d2"></pre>
+
+
+    <pre id="demo"></pre>
+
+
+    <script>
+      //     var z = [];
+      //var x = [];
+
+
+      function loadXMLDoc() {
+        var xmlhttp;
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+          if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            //document.getElementById("demo").innerHTML =
+            var asdf = xmlhttp.responseText;
+            //  var lines = asdf.split('\r');
+            var lines2 = asdf.split("\\s+");
+
+       //     var lines = asdf.split("");
+
+
+            document.getElementById("demo").innerHTML = lines2;
+            for (var line = 0; line < lines2.length; line++) {
+              //  document.getElementById("demo").innerHTML += lines2[line];
+              var one = lines2[line].split(" ");
+
+              document.getElementById("d2").innerHTML += one;
+
+
+              for (var i = 0; i < one.length; i++) {
+                if (one[i] == "public" || (one[i] == "static") || (one[i] == "int") || (one[i] == "boolean") || (one[i] == "throws") || (one[i] == "void") || (one[i] == "double") || (one[i] == "class") || (one[i] == "long") || (one[i] == "new")){
+                  //document.getElementById("d1").insertAdjacentHTML('afterend', '<span style="color:blue;">' + one[i] + " " +'</span>');
+                  var blue = one[i].split("");
+                  document.getElementById("d3").innerHTML = blue;
+
+                  for (var j = 0; j < blue.length; j++) {
+                    document.getElementById("d1").insertAdjacentHTML('beforeend', '<span style="color:blue;">' + blue[j]  +'</span>');
+                  }
+                  document.getElementById("d1").insertAdjacentHTML('beforeend', '<span>'+" "+'</span>');
+
+                }
+                else {
+                  var reg = one[i].split("");
+
+                  for (var k = 0; k < reg.length; k++) {
+                    document.getElementById("d1").insertAdjacentHTML('beforeend', '<span style="color:black;">' + reg[k]  +'</span>');
+                  }
+                  document.getElementById("d1").insertAdjacentHTML('beforeend', '<span>'+" "+'</span>');
+
+                }
+              }
+
+            }
+            //for (var i = 0; i < lines2.length; i++) {
+            //z.push(lines2[i]);
+
+            //  if (lines2[i].valueOf() == "import") {
+            //    document.getElementById("d1").insertAdjacentHTML('afterend', '<span style="color:blue;">' + lines2[i] + '</span>');
+
+            //var next1 = lines[i];
+            //var next2 = next1.slipt("");
+            //for (var j = 0; j < next2.length; j++)
+            //{
+            //  x.push('<span id="p">'+ next2[j]+ '</span>');
+            //document.getElementById("d2").insertAdjacentHTML('afterend', '<span id="p">'+ next2[j]+ ' ' + '</span>' );
+            //}
+            //  }
+            //}
+
+
+          }
+          //document.getElementById("d2").insertAdjacentHTML('afterend', x);
+
+        };
+        xmlhttp.open("GET", "abc.java", true);
+        xmlhttp.send();
+      }
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,224 @@
+<<<<<<< HEAD
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Homescreen for Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="ToDo">
+
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#00BCD4">
+        <meta name="apple-mobile-web-app-title" content="Polymer StarterKit">
+
+        <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+
+
+        <link rel="import" href="elements/elements.html">
+        <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    </head>
+
+    <body fullbleed-vertical-layout>
+        <style>
+
+        </style>
+        <template is="dom-bind" id="type">
+            <!--<paper-ripple id="ripple" recenters style="pointer-events: none;"></paper-ripple>-->
+            <paper-drawer-panel>
+                <paper-scroll-header-panel drawer condenses keep-condensed-header>
+                    <paper-toolbar class="tall" style="background-color: #00897B">
+                        <paper-fab icon="home" style="background-color: #006064"></paper-fab>
+                    </paper-toolbar>
+
+                    <paper-menu>
+                        <paper-submenu>
+                            <paper-item class="menu-trigger">Topics</paper-item>
+                            <paper-menu class="menu-content">
+                                <paper-item>Topic 1</paper-item>
+                                <paper-item>Topic 2</paper-item>
+                                <paper-item>Topic 3</paper-item>
+                            </paper-menu>
+                        </paper-submenu>
+                        <paper-submenu>
+                            <paper-item class="menu-trigger">Faves</paper-item>
+                            <paper-menu class="menu-content">
+                                <paper-item>Fave 1</paper-item>
+                                <paper-item>Fave 2</paper-item>
+                            </paper-menu>
+                        </paper-submenu>
+                        <paper-submenu disabled>
+                            <paper-item class="menu-trigger">Unavailable</paper-item>
+                            <paper-menu class="menu-content">
+                                <paper-item>Disabled 1</paper-item>
+                                <paper-item>Disabled 2</paper-item>
+                            </paper-menu>
+                        </paper-submenu>
+
+                    <!--paper-material elevation="1">
+                            <!--span>
+                              <a data-route="one" href="{{baseUrl}}one.html">
+                            <span>Chapter 1</span>
+                            </a>
+                            </span-->
+
+                    <!--/paper-material-->
+                    <paper-material elevation="2">
+                        <paper-ripple></paper-ripple>Type
+                    </paper-material>
+                    <paper-material elevation="2">
+                        <paper-ripple></paper-ripple>
+                        Selections
+                    </paper-material>
+                    <paper-material elevation="2">
+                        <paper-ripple></paper-ripple>
+                        Resources
+                    </paper-material>
+                    <paper-material elevation="2">
+                        <paper-ripple></paper-ripple>Tips & tricks
+                    </paper-material>
+                    <paper-material elevation="2">
+                        <paper-ripple></paper-ripple>More materials
+                    </paper-material>
+                    <paper-material elevation="2">
+                        <paper-ripple></paper-ripple>More Selections
+                    </paper-material>
+                    <paper-material elevation="2">
+                        <paper-ripple></paper-ripple>Tips & tricks
+                    </paper-material>
+                    <paper-material elevation="2">
+                        <paper-ripple></paper-ripple>More materials
+                    </paper-material>
+                    <paper-material elevation="2">
+                        <paper-ripple></paper-ripple>More Selections
+                    </paper-material>
+                    <paper-material elevation="2">
+                        <paper-ripple></paper-ripple>Tips & tricks
+                    </paper-material>
+                    <paper-material elevation="2">
+                        <paper-ripple>
+                            More
+                        </paper-ripple>More materials
+                    </paper-material>
+                    <paper-material elevation="2">
+                        <paper-ripple></paper-ripple>More Selections
+                    </paper-material>
+                    <paper-material elevation="2">
+                        <paper-ripple></paper-ripple>More Resources
+                    </paper-material>
+                    <paper-material elevation="2">
+                        <paper-ripple></paper-ripple>About
+                    </paper-material>
+                    </paper-menu>
+
+                </paper-scroll-header-panel>
+
+                <paper-scroll-header-panel main condenses keep-condensed-header>
+                    <paper-toolbar class="tall">
+                        <paper-icon-button icon="menu" paper-drawer-toggle></paper-icon-button>
+                        <span class="spacer" style="font:30px Ubuntu">type</span>
+                        <span>
+
+                        <span class="spacer" style="font:44px Ubuntu">java</span>
+                        </span>
+                        <paper-progress class="bottom fit" value="100"></paper-progress>
+                    </paper-toolbar>
+                    <pre>
+                    <paper-material elevation="4">
+
+                    <!--p style=" margin-left:20px; margin-right:20px; padding:20px; display:fit;"-->
+                    Getting started...
+
+                    Sometimes programming seems like it would take a lifetime just
+                    to understand the simple concepts. The words look funny and you
+                    ask yourself..."what is a SyntaxError?"...or the ever popular
+                    statements such as...
+                    public static void main(String[] args) {
+
+                    }
+                    ...
+                    The list goes on. Some languages like C for instance use
+                    **(*(name+1))
+                    ..
+                    you may have seen this statement before and wondered to yourself..
+                    echo $PATH
+
+                    ... yes I would love some money on my path.
+                    But I donnot know anywhere that it echoes????
+
+
+
+                    </paper-material>
+                    </pre>
+                    <!-- Trigger/Open The Modal -->
+                    <paper-material>
+                        <paper-button onclick="toast1.open()">Persistent toast</paper-button>
+                        <paper-toast id="toast1" duration="0" text=>
+                            <paper-button onclick="toast1.toggle()" class="yellow-button">Close now!</paper-button>
+                        </paper-toast>
+
+                        <paper-button id="myBtn">Chapter One</paper-button>
+                        <paper-button>Chapter Two</paper-button>
+                    </paper-material>
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <button type="button" onclick="loadXMLDoc()">Confirm chapter.</button>
+                            <div class="modal-header"> <span class="close">x</span>
+
+                                <button type="button" class="button">Click to start
+
+                                    <input type="text" class="input" onkeypress="myFunction(event)" onkeydown="func(event)" autofocus> </button>
+
+
+                            </div>
+                            <div class="modal-body">
+                                <pre id="d1"></pre>
+                                <pre id="d2"></pre>
+                                <div id="demo2">
+                                </div>
+                                <div id="d"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <h3>Modal Footer</h3> </div>
+                        </div>
+                    </div>
+
+
+
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <button type="button" onclick="loadXMLDoc2()">Confirm chapter.</button>
+                            <div class="modal-header"> <span class="close">x</span>
+
+                                <button type="button" class="button">Click to start
+                                    <input type="text" class="input" onkeypress="myFunction(event)" onkeydown="func(event)" autofocus> </button>
+                            </div>
+                            <div class="modal-body">
+                                <pre id="d1"></pre>
+                                <pre id="d2"></pre>
+                                <div id="demo2">
+                                </div>
+                                <div id="d"></div>
+                                <div class="modal-footer">
+                                </div>
+                                <script type="text/javascript" src="s2.js"></script>
+
+                </paper-scroll-header-panel>
+
+            </paper-drawer-panel>
+
+            <script type="text/javascript" src="script.js"></script>
+        </template>
+
+    </body>
+
+</html>
